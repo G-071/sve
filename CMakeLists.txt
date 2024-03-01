@@ -31,7 +31,7 @@ target_include_directories(
   sve INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
                $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 
-target_compile_features(sve INTERFACE cxx_std_20)
+#target_compile_features(sve INTERFACE cxx_std_20)
 target_compile_definitions(sve INTERFACE SVE_LEN=${SVE_LENGTH})
 target_compile_options(sve INTERFACE "-msve-vector-bits=${SVE_LENGTH}")
 
